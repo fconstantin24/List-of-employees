@@ -1,0 +1,62 @@
+#include "list.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+typef struct nod
+{
+	char nume[20];
+	char nr_de_telefon[10];
+	char post[20];
+	struct nod *next, *prev;
+} nod; 
+
+int main()
+{	
+	nod *list_head;
+
+	list_head = create("mirel", "0769696969", "pilot", nod **list)
+	return 0;
+}
+
+nod *create(char nume[20], char nr_de_telefon[10], char post[20], nod **list)
+{
+	nod *aux, *u = **list;
+	int i = 1;
+
+	aux = (nod *) malloc (sizeof (nod));
+	if (aux) {
+		strcpy (aux->nume, nume);
+		strcpy (aux->nr_de_telefon, nr_de_telefon);
+		strcpy (aux->post, post);
+	}
+
+	while (u) {
+		if (i == 3) {
+			aux->next = u->next;
+			u->next = aux;
+			aux->prev = u;
+			u->next->prev = aux;
+			break;
+		}
+	}
+	
+	while (u) {
+		if (strcmp( u.post , "mecanic" )==0 ) {
+			aux->next = u->next;
+			u->next = aux;
+			aux->prev = u;
+			u->next->prev = aux;
+			break;
+		}
+	}
+
+	nod *remove_node(nod*list_head, int val)
+{
+	aux = get_nod(list_head, u.nr_de_telefon);
+	list_head->next = aux->next;
+	free(aux);
+	return list_head;
+}
+
+	return *list;
+}
